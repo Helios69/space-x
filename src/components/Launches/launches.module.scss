@@ -1,0 +1,24 @@
+.loadmore {
+  font-size: 16px;
+  color: #212121;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 40px;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 61px;
+  cursor: pointer;
+  &:hover, &:hover svg{
+      color: lighten(#212121, 15%);
+      fill: lighten(#212121, 15%);
+  }
+  svg {
+    height: 10px;
+    width: auto;
+    fill: #212121;
+    margin-right: 10px;
+  }
+}

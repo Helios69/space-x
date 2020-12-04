@@ -1,0 +1,116 @@
+.launch{
+    box-shadow: 0 3px 5px rgba(#000, .1);
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    margin-bottom: 16px;
+    &__image{
+        width: 138px;
+        height: 138px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #EEEEEE;
+        img{
+            height: 96px;
+            width: auto;
+        }
+    }
+    &__content{
+        padding: 16px 30px 16px;
+        flex: 1;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 26px;
+        color: #282828;
+        span{
+            color: #BDBDBD;
+        }
+    }
+    &__status{
+        margin-left: 16px;
+        padding: 4px 16px;
+        height: 24px;
+        border-radius: 12px;
+    }
+    &__status__unknown{
+        background-color: #B3E5FC;
+        color: #42A5F5;
+    }
+    &__status__failure{
+        background-color: #FFCDD2;
+        color: #EF5350;
+    }
+    &__status__success{
+        background-color: #B2DFDB;
+        color: #26A69A;
+    }
+    &__article{
+        height: 18px;
+        margin-left: auto;
+        svg{
+            fill: #BDBDBD;
+            height: 100%;
+        }
+        &:hover svg{
+            fill: darken(#BDBDBD, 10%);
+        }
+    }
+
+    &__date{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #7D7D7D;
+        margin: 16px 0;
+        span{
+            font-weight: 700;
+        }
+    }
+    &__text{
+        margin: 0;
+        height: 33px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #212121;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 142px;
+    }
+    &__video{
+        color: #D50000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        svg{
+            fill: #D50000;
+            height: 14px;
+            width: 14px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.launch__inner_image{
+    height: 80px;
+    width: 80px;
+    background: #e0e0e0;
+    border-radius: 16px;
+    animation: animation .4s infinite alternate ease-in-out;
+}
+
+@keyframes animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+}

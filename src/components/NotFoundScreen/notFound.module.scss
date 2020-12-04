@@ -1,0 +1,14 @@
+.notFound {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 234px 0;
+  &__text {
+    margin-top: 59px;
+    width: 440px;
+    font-size: 22px;
+    line-height: 26px;
+    color: #212121;
+    text-align: center;
+  }
+}

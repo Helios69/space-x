@@ -1,0 +1,64 @@
+@mixin loadingState {
+  background: #e0e0e0;
+  border-radius: 16px;
+  animation: animation .4s infinite alternate ease-in-out;
+}
+@keyframes animation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+  }
+.launch {
+  box-shadow: 0 3px 5px rgba(#000, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  margin-bottom: 16px;
+  &__image {
+    width: 138px;
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+  }
+  &__inner_image {
+    height: 80px;
+    width: 80px;
+    @include loadingState;
+  }
+  &__content {
+    padding: 16px 30px 16px;
+    flex: 1;
+  }
+  &__title {
+    width: 130px;
+    height: 25px;
+    @include loadingState;
+    margin-right: 16px;
+  }
+  &__status {
+    @include loadingState;
+    width: 69px;
+    height: 25px;
+  }
+  &__date {
+    margin: 16px 0;
+    width: 198px;
+    height: 15px;
+    @include loadingState;
+  }
+  &__text {
+    @include loadingState;
+    width: 533px;
+    height: 14px;
+    &:last-child {
+      width: 380px;
+      margin-top: 5px;
+    }
+  }
+}
