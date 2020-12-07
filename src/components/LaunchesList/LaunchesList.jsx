@@ -12,13 +12,13 @@ const LaunchesList = ({title, items}) => {
                 <span>{title}</span>
             </div>
             {
-                items === null ?
+                !items.length ?
                 (<>
                 <PreloaderItem />
                 <PreloaderItem />
                 <PreloaderItem />
                 </>) : (
-                    items.map(item => <LaunchesItem item={item}/>)
+                    items.map((item, index) => <LaunchesItem key={index} item={item}/>)
                 )
             }
         </div>

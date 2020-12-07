@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
+import { connect } from "react-redux";
 import Navbar from "./components/Navbar/Navbar";
 import Launches from "./components/Launches/Launches";
 import NotFoundScreen from "./components/NotFoundScreen/NotFoundScreen";
 
-function App() {
+function App({ fetchingError }) {
   return (
     <>
       <Navbar />
-      <Launches />
-      {/* <NotFoundScreen /> */}
+      {fetchingError ? <NotFoundScreen /> : <Launches />}
     </>
   );
 }
 
-export default App;
+const mapStateToProps = ({ launchesReducer }) => ({
+  fetchingError: launchesReducer.fetchingError,
+});
+
+export default connect(mapStateToProps, null)(App);
